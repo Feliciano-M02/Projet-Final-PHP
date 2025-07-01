@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mon Profil - Mon Réseau Social</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <h2>Mon profil</h2>
+  <div id="profileInfos"></div>
+
+  <h3>Modifier mes informations</h3>
+  <form id="updateForm">
+    <input type="text" name="firstname" id="firstname" placeholder="Prénom" required /><br>
+    <input type="text" name="lastname" id="lastname" placeholder="Nom" required /><br>
+    <input type="email" name="email" id="email" placeholder="Email" required /><br>
+    <button type="submit">Mettre à jour</button>
+  </form>
+
+  <h3>Changer mon mot de passe</h3>
+  <form id="passwordForm">
+    <input type="password" name="old_password" placeholder="Ancien mot de passe" required /><br>
+    <input type="password" name="new_password" placeholder="Nouveau mot de passe" required /><br>
+    <button type="submit">Changer le mot de passe</button>
+  </form>
+
+  <h3>Changer ma photo de profil</h3>
+  <form id="avatarForm" enctype="multipart/form-data">
+    <input type="file" name="avatar" accept="image/*" /><br>
+    <button type="submit">Mettre à jour la photo</button>
+  </form>
+
+  <button onclick="logout()">Se déconnecter</button>
+  <div id="message"></div>
+
+  <script src="../../assets/js/profile.js"></script>
+</body>
+</html>

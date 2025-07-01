@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat - Mon Réseau Social</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <h2>Chat</h2>
+  <div style="display:flex;">
+    <div style="width:30%; border-right:1px solid #ccc;" id="sidebar"></div>
+    <div style="width:70%; padding-left:10px;">
+      <div id="messages" style="height:400px; overflow-y:auto; border:1px solid #ccc;"></div>
+      <form id="chatForm">
+        <input type="text" name="message" id="message" placeholder="Message" required />
+        <input type="file" name="image" id="image" accept="image/*" />
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <button onclick="logout()">Se déconnecter</button>
+  <script src="../../assets/js/chat.js"></script>
+</body>
+</html>

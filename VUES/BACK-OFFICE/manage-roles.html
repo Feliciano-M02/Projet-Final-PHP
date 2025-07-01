@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des rôles</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <h2>Gestion des rôles</h2>
+  <div id="roleList"></div>
+
+  <h3>Ajouter un rôle</h3>
+  <form id="addRoleForm">
+    <input type="text" name="role_name" placeholder="Nom du rôle" required />
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <button onclick="logout()">Se déconnecter</button>
+  <div id="message"></div>
+  <script src="../../assets/js/manage-roles.js"></script>
+</body>
+</html>

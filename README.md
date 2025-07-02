@@ -1,2 +1,3 @@
 # Projet-Final-PHP
-Création d'un clone de facebook.
+Création d'un clone de facebook (myChat).
+

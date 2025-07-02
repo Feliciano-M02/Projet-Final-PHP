@@ -45,7 +45,7 @@ loadFeed();
 
 // gérer le like
 function toggleLike(postId, liked) {
-  fetch(../../api/posts.php?action=like, {
+  fetch(`../../api/posts.php?action=like`, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user_id: user.id, post_id: postId, liked: liked })
@@ -55,21 +55,22 @@ function toggleLike(postId, liked) {
 
 // charger les commentaires
 function loadComments(postId) {
-  fetch(../../api/posts.php?action=comments&post_id=${postId})
+  fetch(`/api/posts.php?action=comments&post_id=${postId}`)
     .then(response => response.json())
     .then(comments => {
       let html = '';
       comments.forEach(c => {
-        html += <strong>${c.firstname} ${c.lastname}</strong>: ${c.comment}<br>;
+        html += `<strong>${c.firstname} ${c.lastname}</strong>: ${c.comment}<br>`;
       });
-      document.getElementById(comments-${postId}).innerHTML = html;
-    });
+      document.getElementById(comments-`${postId}`).innerHTML = html;
+    })
 }
 
 // ajouter un commentaire
 function addComment(postId) {
-  const text = document.getElementById(commentInput-${postId}).value;
-  fetch(../../api/posts.php?action=add_comment, {
+  let text = document.getElementById(commentInput-${postId}).value;
+  
+  fetch(`/api/posts.php?action=add_comment`, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user_id: user.id, post_id: postId, comment: text })

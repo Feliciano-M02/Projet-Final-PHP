@@ -11,7 +11,7 @@ function logout() {
 let activeConversation = null;
 
 function loadSidebar() {
-  fetch(../../api/chat.php?action=list_friends&user_id=${user.id})
+  fetch(`/api/chat.php?action=list_friends&user_id=${user.id}`)
     .then(r => r.json())
     .then(data => {
       let html = '';
@@ -26,7 +26,7 @@ function loadSidebar() {
 }
 
 function selectConversation(friendId) {
-  fetch(../../api/chat.php?action=start_conversation&user_id=${user.id}&friend_id=${friendId})
+  fetch(`/api/chat.php?action=start_conversation&user_id=${user.id}&friend_id=${friendId}`)
     .then(r => r.json())
     .then(data => {
       activeConversation = data.conversation_id;
@@ -36,14 +36,15 @@ function selectConversation(friendId) {
 
 function loadMessages() {
   if (!activeConversation) return;
-  fetch(../../api/chat.php?action=get_messages&conversation_id=${activeConversation})
+     fetch(`/api/chat.php?action=get_messages&conversation_id=${activeConversation}`)
     .then(r => r.json())
     .then(data => {
       let html = '';
       data.forEach(msg => {
-        html += `<div>
-          <strong>${msg.firstname} ${msg.lastname}</strong>: ${msg.message}
-          ${msg.image ? <br><img src="../../assets/images/${msg.image}" width="100"> : ""}
+        html += `
+          <div>
+              <strong>${msg.firstname} ${msg.lastname}</strong>: ${msg.message}
+              ${msg.image ? `<br><img src="../../assets/images/${msg.image}" width="100">` : ""}
           </div><hr>`;
       });
       document.getElementById('messages').innerHTML = html;
@@ -71,9 +72,9 @@ document.getElementById('chatForm').addEventListener('submit', function(e){
 });
 
 // refresh messages every 3s
-setInterval(() => {
+setInterval(() =>{
   if (activeConversation) {
-    loadMessages();
+    loadMessages()
   }
 }, 3000);
 

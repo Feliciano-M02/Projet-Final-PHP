@@ -9,7 +9,7 @@ function logout(){
 }
 
 function loadStats(){
-  fetch(../../api/admin.php?action=stats)
+  fetch(`/api/admin.php?action=stats`)
     .then(r=>r.json())
     .then(stats=>{
       document.getElementById('stats').innerHTML = `

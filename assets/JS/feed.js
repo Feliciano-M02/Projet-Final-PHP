@@ -20,7 +20,7 @@ function loadFeed() {
             <img src="../../assets/images/${post.avatar}" alt="avatar" width="50">
             <strong>${post.firstname} ${post.lastname}</strong><br>
             <p>${post.description}</p>
-            ${post.image ? <img src="../../assets/images/${post.image}" width="200"> : ''}
+            $ {post.image ? <img src="../../assets/images/${post.image}" width="200"> : ''}
             <br>
             <button onclick="toggleLike(${post.id}, ${post.liked_by_user ? 1 : 0})">
               ${post.liked_by_user ? '❤' : '🤍'}
@@ -68,7 +68,7 @@ function loadComments(postId) {
 
 // ajouter un commentaire
 function addComment(postId) {
-  let text = document.getElementById(commentInput-${postId}).value;
+  let text = document.getElementById(`commentInput-${postId}`).value;
   
   fetch(`/api/posts.php?action=add_comment`, {
     method: 'POST',
@@ -77,7 +77,7 @@ function addComment(postId) {
   })
   .then(() => {
     loadComments(postId);
-    document.getElementById(commentInput-${postId}).value = "";
+    document.getElementById(`commentInput-${postId}`).value = "";
   });
 }
 

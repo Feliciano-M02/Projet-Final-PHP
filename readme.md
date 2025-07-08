@@ -1,4 +1,4 @@
-# Réseau Social en PHP/AJAX
+# Réseau Social en PHP/AJAX (myChat)
 
 ## 🎯 Objectif
 
@@ -17,4 +17,4 @@ Mini réseau social inspiré de Facebook, développé en PHP natif et JavaScript
 - Gestion des utilisateurs
 - Dashboard statistiques
 
-## 🗂 Architecture
+## 🗂 Architectures

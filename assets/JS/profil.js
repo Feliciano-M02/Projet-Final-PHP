@@ -10,7 +10,7 @@ function logout() {
 
 // charger les infos
 function loadProfile() {
-  fetch(../../api/user.php?action=profile&user_id=${user.id})
+  fetch(`../../api/user.php?action=profile&user_id=${user.id}`)
     .then(r => r.json())
     .then(data => {
       document.getElementById('profileInfos').innerHTML = `

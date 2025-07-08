@@ -24,6 +24,20 @@ if ($_GET['action'] === 'update') {
     exit;
 }
 
+// create
+if ($_GET['action'] === 'register') {
+    $firstname = htmlspecialchars($_POST['firstname']);
+    $lastname = htmlspecialchars($_POST['lastname']);
+    $email = htmlspecialchars($_POST['email']);
+    $password= sha1(htmlspecialchars($_POST['password']));
+
+    $stmt = $pdo->prepare("INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$firstname, $lastname, $email, $password]);
+
+    echo json_encode(["success"=>true, "message"=>"Profil mis à jour"]);
+    exit;
+}
+
 // update password
 if ($_GET['action'] === 'update_password') {
     $id = $_POST['user_id'];

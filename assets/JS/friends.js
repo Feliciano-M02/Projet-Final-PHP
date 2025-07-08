@@ -7,7 +7,7 @@ if (!user) {
 function logout() {
   sessionStorage.clear();
   window.location.href = "login.html";
-}
+};
 
 // charger les utilisateurs pour envoyer des invitations
 function loadUsers() {

@@ -90,10 +90,10 @@ CREATE TABLE messages (
 
 -- Un compte admin de test
 INSERT INTO users (firstname, lastname, email, password, role_id) 
-VALUES ('Admin', 'Principal', 'admin@monsocial.com', 
-        '$2y$10$wY8d0zV4QH5JbTTaxuYF2e0cQm9kIRovx9w0q8s6eB7tQauIzyxTC', 3);
+VALUES ('Richard', 'Anagonou', 'richard@gmail.com', 
+        '$2y$10$uaQ.KLKFnCbuFK2l7STcXu8mmQJMGHkgWtXPTj3rEukV4Yab1b9OS', 3);
 
 -- Un utilisateur de test
 INSERT INTO users (firstname, lastname, email, password, role_id) 
-VALUES ('Test', 'User', 'test@monsocial.com', 
-        '$2y$10$Jf6T4Z/fbl6NHzEriXegM.Nuf3ti4Zprp.QOG2tQ5KpmUol57mv/2', 1);
+VALUES ('Miguel', 'Feliciano', 'feliciano@gmail.com', 
+        '$2y$10$gZsbFrgUmJROx2QN.njb8.6A5zW001KiwfSLU2MpajijyzhnoVzTS', 1);

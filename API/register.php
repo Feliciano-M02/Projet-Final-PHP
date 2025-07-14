@@ -44,8 +44,8 @@ if (strlen($password) < 6) {
 
 try {
     // Connexion à la base de données (via fichier database.php)
-    $pdo = new PDO("mysql:host=localhost;dbname=myChat", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $pdo = new PDO("mysql:host=localhost;dbname=myChat", "root", "");
+    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Vérifier si l'utilisateur existe déjà (email insensible à la casse)
     $stmt = $pdo->prepare("SELECT id FROM users WHERE LOWER(email) = LOWER(?)");

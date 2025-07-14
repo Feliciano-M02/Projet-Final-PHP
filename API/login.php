@@ -33,8 +33,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 try {
     // Connexion à la base
-    $pdo = new PDO("mysql:host=localhost;dbname=myChat", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $pdo = new PDO("mysql:host=localhost;dbname=myChat", "root", "");
+    // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Récupérer l'utilisateur correspondant à l'email
     $stmt = $pdo->prepare("SELECT id, firstname, lastname, email, password, role FROM users WHERE LOWER(email) = LOWER(?)");

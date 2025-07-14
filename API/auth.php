@@ -1,3 +1,4 @@
+<?php
 if ($_GET['action'] === 'login') {
     $email = htmlspecialchars($_POST['email']);
     $password = $_POST['password'];
@@ -21,7 +22,7 @@ if ($_GET['action'] === 'login') {
         ]);
         exit;
     } else {
-        echo json_encode(["success" => false, "message" => "Identifiants invalides."]);
-        exit;
-    }
+    echo json_encode(["success" => false, "message" => "Identifiants invalides."]);
+    exit;
+}
 }

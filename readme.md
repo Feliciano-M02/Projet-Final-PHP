@@ -1,20 +1,22 @@
-# Réseau Social en PHP/AJAX (myChat)
+# Projet-Final-PHP
+Création d'un clone de facebook (myChat).
 
-## 🎯 Objectif
+Pojet réalisé par:
+- d'ALMEIDA Feliciano Miguel
+- ANAGONOU Richard
+- AHOUANDJINOU Credo
+- SENOU Michael 
+    
+    °Inormations Clients
+        Nom: Feliciano
+        Prénom: Miguel
+        MDP: azerty
+        Email: feliciano@gmail.com
 
-Mini réseau social inspiré de Facebook, développé en PHP natif et JavaScript natif (AJAX), sans rechargement de page après chargement initial.  
+    °Informations Admin 
+        Nom: Anagonou
+        Prénom: Richard
+        MDP: qwerty
+        Email: richard@gmail.com
 
-## 🚀 Fonctionnalités
 
-- Authentification complète (inscription avec email HTML, mot de passe oublié)
-- Session gérée côté sessionStorage
-- Flux d'articles (posts + images + commentaires + likes/dislikes)
-- Gestion des amis (invitations, acceptation, consultation de profils)
-- Gestion du profil (infos, mot de passe, avatar)
-- Module de chat (messages texte + images, rafraîchissement 3s)
-- Back-office avec rôles (admin, modérateur)
-- Gestion des rôles
-- Gestion des utilisateurs
-- Dashboard statistiques
-
-## 🗂 Architectures

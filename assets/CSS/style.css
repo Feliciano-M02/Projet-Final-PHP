@@ -1,92 +1,118 @@
+/* GLOBAL */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
-    color: #333;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
 }
 
 h2, h3 {
-    color: #0056b3;
-}
-
-form {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-input, select, button {
-    margin: 5px 0;
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #003d80;
+  color: #1877f2;
 }
 
 a {
-    color: #0056b3;
-    text-decoration: none;
+  color: #1877f2;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+button {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #145dbf;
+}
+
+/* FORMS */
+form {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* FEED */
 .post {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  background: white;
+  margin: 15px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 600px;
 }
 
-img {
-    border-radius: 5px;
-    max-width: 100%;
+.post img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
+/* COMMENTS */
+#comments {
+  margin-top: 10px;
+}
+
+#comments strong {
+  color: #555;
+}
+
+/* CHAT */
 #messages {
-    background-color: #fff;
-    padding: 10px;
+  background: #fff;
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
+/* SIDEBAR CHAT */
 #sidebar {
-    background-color: #f1f1f1;
-    padding: 10px;
-    height: 400px;
-    overflow-y: auto;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  height: 400px;
+  overflow-y: auto;
+  border-radius: 5px;
 }
 
 #sidebar div:hover {
-    background-color: #ddd;
+  background: #eee;
 }
 
-#message {
-    margin-top: 10px;
-    color: red;
-}
-
-#registerMessage, #loginMessage {
-    margin-top: 10px;
-    color: red;
-}
-
+/* DASHBOARD */
 #stats {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  background: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* MESSAGES & ALERTS */
+#message,
+#loginMessage,
+#registerMessage {
+  color: red;
+  margin-top: 10px;
 }

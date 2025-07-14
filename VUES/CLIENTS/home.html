@@ -7,11 +7,19 @@
 </head>
 <body>
   <h2>Bienvenue sur le fil d'actualité</h2>
+  
+  <a href="friends.html">Gérer mes amis</a>
   <div id="feed"></div>
   <button onclick="logout()">Se déconnecter</button>
+
+  <!-- Sécurité : Redirection si pas connecté -->
+  <script>
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    if (!user) {
+      window.location.href = 'login.html';
+    }
+  </script>
 
   <script src="../../assets/js/feed.js"></script>
 </body>
 </html>
-
-<a href="friends.html">Gérer mes amis</a>
